@@ -1,12 +1,18 @@
-import React from 'react';
+import i18n from '@Services/i18n/config';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { I18nextProvider } from 'react-i18next';
 import App from './components/App';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={null}>
+      <I18nextProvider i18n={i18n}>
+        <App />
+      </I18nextProvider>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root'),
 );
