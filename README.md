@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+# Dog photo finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Application developed in React to search for photos of dogs by selecting the breed previously.
 
-In the project directory, you can run:
+Used APIs:
 
-### `yarn start`
+- [List of dog breeds](https://dog.ceo/api/breeds/list/all)
+- [List of dog images](https://dog.ceo/api/breed/<raza>/images)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Aplication
+
+## Pre-requirements
+
+- [Yarn](https://yarnpkg.com/)
+
+## Run app
+
+Install yarn in your device in order to execute this application.
+
+### First execution
+
+Use `yarn install` to install all project dependencies.
+Then, run `yarn start` to begin his execution and access in your navigator to [http://localhost:3000](http://localhost:3000).
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### Execution
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If the project dependencies have not been modified, just run `yarn start` to start the application.
 
-### `yarn build`
+## Folder structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    .
+    ├── public
+    │   └── locales                 # Translations
+    ├── src                         # App components
+    │   ├── assets                  # Images, icons, fonts, ...
+    │   ├── components              # Presentational components
+    │   │   ├── ExampleComponent
+    │   │   │   ├── index.tsx       # Component definition
+    │   │   │   ├── styles.ts       # Component styles
+    │   │   │   ├── types.ts        # Custom types used in this component
+    │   │   │   └── logic.ts        # Some logic used in this component
+    │   ├── containers              # Views and container components
+    │   ├── services                # External services used (like i18n, api, ...)
+    │   ├── styles                  # Theme and styles configuration
+    │   ├── store                   # Redux store configuration
+    │   └── utils                   # Helper funtions
+    ├── .babelrc                    # Babel configuration
+    ├── .eslintignore
+    ├── .eslintrc.js                # Eslint configuration
+    ├── .gitignore
+    ├── .prettierrc.js              # Prettier configuration
+    ├── package.json
+    ├── README.md
+    ├── tsconfig.json
+    ├── tsconfig.paths.json         # Aliases list
+    └── yarn.lock
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Axios](https://github.com/axios/axios): A library for execute HTTP requests from navigator
+- [Babel](https://babeljs.io/): JavaScript compiler
+- [Material UI](https://material-ui.com/): Frontend components library
+- [React](https://es.reactjs.org/): A JavaScript library for building user interfaces
+- [React router](https://reactrouter.com/): Routes manager
+- [Redux](https://es.redux.js.org/): States container
+- [Redux-saga](https://redux-saga.js.org/): Library for manage side effects
+- [React-i18next](https://react.i18next.com/): Internacionalization pluging based in i18next
+- [Styled components](https://styled-components.com/): Utilises tagged template literals to style your component
+- [TypeScript](https://www.typescriptlang.org/)
