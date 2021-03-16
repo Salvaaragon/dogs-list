@@ -1,0 +1,7 @@
+{
+  "selector": {
+    "label": "Dog breed",
+    "placeholder": "Select a dog breed"
+  },
+  "empty": "Not found images"
+}
