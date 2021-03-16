@@ -42,7 +42,8 @@
   },
   "lint-staged": {
     "./src/*.{js,jsx,ts,tsx}": [
-      "prettier --write"
+      "prettier --write",
+      "eslint src/*.tsx --fix-dry-run"
     ]
   },
   "eslintConfig": {

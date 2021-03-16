@@ -60,11 +60,36 @@ If the project dependencies have not been modified, just run `yarn start` to sta
     ├── tsconfig.paths.json         # Aliases list
     └── yarn.lock
 
+## Aliases
+
+Different aliases have been configured (via Babel) to simplify imports of application elements. These are located in the `.babelrc` file.
+
+## Formatter (Eslint + Prettier)
+
+The project has been configured to detect syntax errors using Eslint, in order to have a more maintainable code that follows the clean code standards.
+
+In addition, this project makes use of the Prettier tool; which, connected to the IDE (in my case, Visual Studio Code), allows the automatic formatting of the code by means of the following properties:
+
+```
+  semi: true => Add ';' at the end of each element
+  trailingComma: 'all' => Add ',' at the end of objects (if is possible)
+  singleQuote: true => Use single quotes
+  tabWidth: 2 => Two spaces indentation
+```
+
+## Precommit
+
+This project makes use of husky and lint-staged to check that the code follows the standard defined in prettier configuration file.
+
 ## Dependencies
 
 - [Axios](https://github.com/axios/axios): A library for execute HTTP requests from navigator
 - [Babel](https://babeljs.io/): JavaScript compiler
+- [Eslint](https://eslint.org/): Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
+- [husky](https://typicode.github.io/husk): Run commands at time of committing
+- [lint-staged](https://github.com/okonet/lint-staged): Run linters on git staged files
 - [Material UI](https://material-ui.com/): Frontend components library
+- [Prettier](https://prettier.io/): Code formatter
 - [React](https://es.reactjs.org/): A JavaScript library for building user interfaces
 - [React router](https://reactrouter.com/): Routes manager
 - [Redux](https://es.redux.js.org/): States container
