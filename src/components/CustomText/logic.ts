@@ -1,5 +1,5 @@
 import {
-  ColorType,
+  TextColorType,
   LoadTextColorFunction,
   TypographyColors,
   TypographyColorType,
@@ -8,10 +8,11 @@ import {
 export const isTypographyColor = (
   color: string,
 ): color is TypographyColorType => {
-  return color in TypographyColors;
+  return TypographyColors.includes(color);
 };
 
-export const loadTextColor: LoadTextColorFunction = (color: ColorType) => {
-  if (isTypographyColor(color)) return color;
-  else return { customcolor: color };
+export const loadTextColor: LoadTextColorFunction = (color: TextColorType) => {
+  if (isTypographyColor(color)) {
+    return { color: color };
+  } else return { customcolor: color };
 };

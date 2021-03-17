@@ -1,7 +1,8 @@
 type TextAlignment = 'right' | 'center' | 'left';
 type CustomColorType = { customcolor: string };
+type ColorType = { color: TypographyColorType };
 
-export type ColorType = TypographyColorType | string;
+export type TextColorType = TypographyColorType | string;
 
 export const TypographyColors = [
   'initial',
@@ -23,8 +24,8 @@ export type TypographyColorType =
   | 'error';
 
 export type LoadTextColorFunction = (
-  color: ColorType,
-) => TypographyColorType | CustomColorType;
+  color: TextColorType,
+) => ColorType | CustomColorType;
 
 export type CustomTextProps = {
   alignment?: TextAlignment;
