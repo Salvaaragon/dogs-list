@@ -1,4 +1,5 @@
 import configureStore from '@Store/configStore';
+import GlobalFonts from '@Styles/globalFonts';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -9,6 +10,7 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
+        <GlobalFonts />
         <div className="App">
           <header className="App-header">
             <p>
