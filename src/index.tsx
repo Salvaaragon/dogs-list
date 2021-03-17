@@ -10,17 +10,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Suspense fallback={null}>
-      <I18nextProvider i18n={i18n}>
-        <MuiThemeProvider theme={theme}>
-          <ThemeProvider theme={theme}>
-            <App />
-          </ThemeProvider>
-        </MuiThemeProvider>
-      </I18nextProvider>
-    </Suspense>
-  </React.StrictMode>,
+  <Suspense fallback={null}>
+    <I18nextProvider i18n={i18n}>
+      <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      </MuiThemeProvider>
+    </I18nextProvider>
+  </Suspense>,
   document.getElementById('root'),
 );
 

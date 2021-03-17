@@ -3,5 +3,8 @@
     "label": "Dog breed",
     "placeholder": "Select a dog breed"
   },
-  "empty": "Not found images"
+  "empty": "Not found images",
+  "required": "Select a dog breed",
+  "loading": "Loading...",
+  "error": "Something went wrong"
 }
