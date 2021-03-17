@@ -3,7 +3,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 
-const namespaces = ['header', 'home'];
+const namespaces = ['header', 'footer', 'home'];
 
 i18n
   .use(Backend)
