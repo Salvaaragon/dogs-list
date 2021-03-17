@@ -5,6 +5,7 @@ import {
   FETCH_BREED_IMAGES,
   FETCH_BREED_IMAGES_DONE,
   FETCH_BREED_IMAGES_ERROR,
+  SELECT_BREED,
 } from '@Store/constants/dogs';
 import { ReduxAction } from '..';
 
@@ -44,5 +45,12 @@ export const fetchBreedImagesDone = (imagesSrc: string[]): ReduxAction => {
 export const fetchBreedImagesError = (): ReduxAction => {
   return {
     type: FETCH_BREED_IMAGES_ERROR,
+  };
+};
+
+export const selectBreed = (breed: string): ReduxAction => {
+  return {
+    type: SELECT_BREED,
+    payload: breed,
   };
 };
