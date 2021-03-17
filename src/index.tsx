@@ -1,5 +1,6 @@
 import { MuiThemeProvider } from '@material-ui/core';
 import i18n from '@Services/i18n/config';
+import theme from '@Styles/theme';
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { I18nextProvider } from 'react-i18next';
@@ -7,7 +8,6 @@ import { ThemeProvider } from 'styled-components';
 import App from './containers/App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import theme from './styles/theme';
 
 ReactDOM.render(
   <React.StrictMode>
