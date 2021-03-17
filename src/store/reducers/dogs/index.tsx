@@ -6,11 +6,13 @@ import {
   FETCH_BREED_IMAGES,
   FETCH_BREED_IMAGES_DONE,
   FETCH_BREED_IMAGES_ERROR,
+  SELECT_BREED,
 } from '@Store/constants/dogs';
 
 export interface DogsState {
   breeds: string[];
   breedImages: string[];
+  breedSelected: string;
   isFetching: boolean;
   isFailed: boolean;
 }
@@ -18,6 +20,7 @@ export interface DogsState {
 const initialState: DogsState = {
   breeds: [],
   breedImages: [],
+  breedSelected: '',
   isFetching: false,
   isFailed: false,
 };
@@ -36,6 +39,7 @@ export const DogsReducer = (
       return {
         ...state,
         isFetching: false,
+        isFailed: false,
         breeds: action.payload,
       };
     case FETCH_ALL_BREEDS_ERROR:
@@ -53,6 +57,7 @@ export const DogsReducer = (
       return {
         ...state,
         isFetching: false,
+        isFailed: false,
         breedImages: action.payload,
       };
     case FETCH_BREED_IMAGES_ERROR:
@@ -60,6 +65,11 @@ export const DogsReducer = (
         ...state,
         isFetching: false,
         isFailed: true,
+      };
+    case SELECT_BREED:
+      return {
+        ...state,
+        breedSelected: action.payload,
       };
 
     default:
