@@ -9,10 +9,12 @@ const Gallery: React.FC = () => {
     (state: RootState) => state.dogsReducer.breedImages,
   );
 
+  const onClickImage = (src: string) => window.open(src, '_blank');
+
   return (
     <GalleryGrid>
       {breedImages.map((src: string) => (
-        <ImageGrid key={src} onClick={() => window.open(src, '_blank')}>
+        <ImageGrid key={src} onClick={() => onClickImage(src)}>
           <CustomImage src={src} />
         </ImageGrid>
       ))}

@@ -6,14 +6,9 @@ export const DataContainerGrid = styled(Grid).attrs(
   (props: DataContainerGridProps) => props,
 )`
   margin-top: 2rem;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: white;
   border: solid 1px ${(props) => props.color};
   border-radius: 4px;
-`;
-
-export const StatusGrid = styled(Grid)`
-  padding-left: 2rem;
-  padding-right: 2rem;
 `;
