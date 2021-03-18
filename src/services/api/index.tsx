@@ -20,7 +20,7 @@ export type GetBreedImagesResponseType = {
 };
 
 export const getAllBreeds = async () => {
-  return await API_CLIENT.get('breeds/list/all/sd');
+  return await API_CLIENT.get('breeds/list/all');
 };
 
 export const getBreedImages = async (breed: string) => {
