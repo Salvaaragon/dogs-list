@@ -1,0 +1,10 @@
+{
+  "selector": {
+    "label": "Raza de perro",
+    "placeholder": "Selecciona una raza de perro"
+  },
+  "empty": "No se han encontrado imágenes",
+  "required": "Selecciona una raza de perro",
+  "loading": "Cargando...",
+  "error": "Algo salió mal"
+}

@@ -1,46 +1,128 @@
-# Getting Started with Create React App
+# Dog photo finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Application developed in React to search for photos of dogs by selecting the breed previously.
 
-In the project directory, you can run:
+Used APIs:
 
-### `yarn start`
+- [List of dog breeds](https://dog.ceo/api/breeds/list/all)
+- [List of dog images](https://dog.ceo/api/breed/<raza>/images)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Demo](https://dog-image-finder.netlify.app/)
+
+## Aplication
+
+## Pre-requirements
+
+- [yarn](https://yarnpkg.com/)/[npm](https://www.npmjs.com/get-npm)
+
+## Run app
+
+Install yarn in your device in order to execute this application.
+
+### First execution
+
+Use `yarn install` or `npm install` to install all project dependencies.
+Then, run `yarn start` or `npm install` to begin his execution and access in your navigator to [http://localhost:3000](http://localhost:3000).
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### Execution
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If the project dependencies have not been modified, just run `yarn start` or `npm install` to start the application.
 
-### `yarn build`
+## Testing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Unit tests have been developed for some of the components located in the same directory as this one.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To execute them, just run `yarn test` or `npm test` (required previous `yarn install` or `npm install`).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In `package.json`, jest has been configured to allow the use of aliases required for tests.
 
-### `yarn eject`
+```
+  "jest": {
+    "moduleNameMapper": {
+      "^@Components(.*)$": "<rootDir>/src/components$1",
+      "^@Styles(.*)$": "<rootDir>/src/styles$1",
+    }
+  }
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Folder structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    .
+    ├── public
+    │   └── locales                 # Translations
+    ├── src                         # App components
+    │   ├── assets                  # Images, icons, fonts, ...
+    │   ├── components              # Presentational components
+    │   │   └── ExampleComponent
+    │   │       ├── index.test.tsx  # Component tests
+    │   │       ├── index.tsx       # Component definition
+    │   │       ├── logic.ts        # Some logic used in this component
+    │   │       ├── styles.ts       # Component styles
+    │   │       └── types.ts        # Custom types used in this component
+    │   ├── containers              # Views and container components
+    │   ├── router                  # App router cofiguration
+    │   ├── services                # External services used (like i18n, api, ...)
+    │   ├── store                   # Redux store configuration
+    │   │   ├── actions             # List of possible actions
+    │   │   ├── constants           # Definition of action types
+    │   │   ├── reducers            # Store status manager
+    │   │   └── sagas               # Side effects manager
+    │   ├── styles                  # Theme and styles configuration
+    │   └── utils                   # Helper funtions
+    ├── .babelrc                    # Babel configuration
+    ├── .eslintignore
+    ├── .eslintrc.js                # Eslint configuration
+    ├── .gitignore
+    ├── .prettierrc.js              # Prettier configuration
+    ├── .rescriptsrc.js
+    ├── package.json
+    ├── README.md
+    ├── tsconfig.json
+    ├── tsconfig.paths.json         # Aliases list
+    └── yarn.lock
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Aliases
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Different aliases have been configured (via Babel) to simplify imports of application elements. These are located in the `.babelrc` file.
 
-## Learn More
+## Formatter (Eslint + Prettier)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project has been configured to detect syntax errors using Eslint, in order to have a more maintainable code that follows the clean code standards.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In addition, this project makes use of the Prettier tool; which, connected to the IDE (in my case, Visual Studio Code), allows the automatic formatting of the code by means of the following properties:
+
+```
+  semi: true => Add ';' at the end of each element
+  trailingComma: 'all' => Add ',' at the end of objects (if is possible)
+  singleQuote: true => Use single quotes
+  tabWidth: 2 => Two spaces indentation
+```
+
+## Precommit
+
+This project makes use of husky and lint-staged to check that the code follows the standard defined in prettier configuration file.
+
+## Dependencies
+
+- [Axios](https://github.com/axios/axios): A library for execute HTTP requests from navigator
+- [Babel](https://babeljs.io/): JavaScript compiler
+- [Eslint](https://eslint.org/): Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
+- [enzyme](https://enzymejs.github.io/enzyme/): Library for execute jest testing in React Apps
+- [husky](https://typicode.github.io/husk): Run commands at time of committing
+- [jest](https://jestjs.io/): A JavaScript testing library
+- [lint-staged](https://github.com/okonet/lint-staged): Run linters on git staged files
+- [Material UI](https://material-ui.com/): Frontend components library
+- [Prettier](https://prettier.io/): Code formatter
+- [React](https://es.reactjs.org/): A JavaScript library for building user interfaces
+- [React infinite scroll loading](https://github.com/ankeetmaini/react-infinite-scroll-component): Component for display infinite scroll loading data
+- [React router](https://reactrouter.com/): Routes manager
+- [Redux](https://es.redux.js.org/): States container
+- [Redux-saga](https://redux-saga.js.org/): Library for manage side effects
+- [React-i18next](https://react.i18next.com/): Internacionalization pluging based in i18next
+- [Styled components](https://styled-components.com/): Utilises tagged template literals to style your component
+- [TypeScript](https://www.typescriptlang.org/)
