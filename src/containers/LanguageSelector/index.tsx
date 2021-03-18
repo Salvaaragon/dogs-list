@@ -2,12 +2,17 @@ import EnglandFlag from '@Assets/icons/flags/en.svg';
 import SpanishFlag from '@Assets/icons/flags/es.svg';
 import IconButton from '@Components/IconButton';
 import { Grid } from '@material-ui/core';
-import i18n from '@Services/i18n/config';
-import React from 'react';
-import { withTranslation } from 'react-i18next';
+import React, { useEffect } from 'react';
+import { useTranslation, withTranslation } from 'react-i18next';
 import { changeLanguage } from './logic';
 
 const LanguageSelector = () => {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.title = i18n.t('header:title');
+  }, [i18n.language]);
+
   return (
     <Grid container justify="flex-end">
       {i18n.language === 'en' && (
