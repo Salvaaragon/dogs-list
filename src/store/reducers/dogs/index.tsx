@@ -34,6 +34,7 @@ export const DogsReducer = (
       return {
         ...state,
         isFetching: true,
+        isFailed: false,
       };
     case FETCH_ALL_BREEDS_DONE:
       return {
@@ -52,6 +53,7 @@ export const DogsReducer = (
       return {
         ...state,
         isFetching: true,
+        isFailed: false,
       };
     case FETCH_BREED_IMAGES_DONE:
       return {

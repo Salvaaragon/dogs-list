@@ -6,14 +6,14 @@ export const CustomFormControl = styled(FormControl)`
 `;
 
 export const CustomInputLabel = styled(InputLabel)`
-  color: ${(props) => props.theme.palette.primary.dark};
-  font-family: Raleway Bold;
-  font-size: 1.5rem;
+  color: ${(props) => props.theme.palette.primary.dark} !important;
+  font-family: Raleway Bold !important;
+  font-size: 1.5rem !important;
 `;
 
 export const CustomSelector = styled(Select)`
   background-color: white;
-  font-family: Raleway;
+  font-family: Raleway !important;
 
   &:not(.empty) {
     text-transform: capitalize;
@@ -21,7 +21,7 @@ export const CustomSelector = styled(Select)`
 `;
 
 export const CustomMenuItem = styled(MenuItem)`
-  font-family: Raleway;
+  font-family: Raleway !important;
 
   &:not(.empty) {
     text-transform: capitalize;
