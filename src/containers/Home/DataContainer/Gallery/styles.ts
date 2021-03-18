@@ -6,6 +6,8 @@ export const GalleryGrid = styled(Grid)`
   flex-wrap: wrap;
   padding-right: 1rem;
   padding-left: 1rem;
+  overflow-y: auto;
+  max-height: 25rem;
 `;
 
 export const ImageGrid = styled(Grid)`

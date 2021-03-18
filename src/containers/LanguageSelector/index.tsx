@@ -15,24 +15,22 @@ const LanguageSelector = () => {
 
   return (
     <Grid container justify="flex-end">
-      {i18n.language === 'en' && (
-        <IconButton
-          onClick={() => changeLanguage('es')}
-          ariaLabel="es"
-          iconAlt="spanish"
-          iconSrc={SpanishFlag}
-          iconWidth="1.5rem"
-        />
-      )}
-      {i18n.language === 'es' && (
-        <IconButton
-          onClick={() => changeLanguage('en')}
-          ariaLabel="en"
-          iconAlt="english"
-          iconSrc={EnglandFlag}
-          iconWidth="1.5rem"
-        />
-      )}
+      <IconButton
+        onClick={() => changeLanguage('es')}
+        ariaLabel="es"
+        iconAlt="spanish"
+        iconSrc={SpanishFlag}
+        iconWidth="1.5rem"
+        disabled={i18n.language === 'es'}
+      />
+      <IconButton
+        onClick={() => changeLanguage('en')}
+        ariaLabel="en"
+        iconAlt="english"
+        iconSrc={EnglandFlag}
+        iconWidth="1.5rem"
+        disabled={i18n.language === 'en'}
+      />
     </Grid>
   );
 };

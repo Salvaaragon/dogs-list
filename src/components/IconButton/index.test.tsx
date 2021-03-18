@@ -9,6 +9,7 @@ configure({
 
 let exampleNumber = 1;
 const EXAMPLE_ARIA_LABEL = 'testing-aria-label';
+const EXAMPLE_DISABLED = false;
 const EXAMPLE_ICON_ALT = 'testing-icon-alt';
 const EXAMPLE_ICON_SRC = 'testing-icon-src';
 const EXAMPLE_ICON_WIDTH = 'testing-icon-width';
@@ -21,6 +22,7 @@ describe('IconButton component testing', () => {
     const wrapper = mount(
       <IconButton
         ariaLabel={EXAMPLE_ARIA_LABEL}
+        disabled={EXAMPLE_DISABLED}
         iconAlt={EXAMPLE_ICON_ALT}
         iconSrc={EXAMPLE_ICON_SRC}
         iconWidth={EXAMPLE_ICON_WIDTH}
@@ -32,6 +34,7 @@ describe('IconButton component testing', () => {
         const wrapperProps = wrapper.find(IconButton).props();
 
         expect(wrapperProps.ariaLabel).toEqual(EXAMPLE_ARIA_LABEL);
+        expect(wrapperProps.disabled).toEqual(EXAMPLE_DISABLED);
         expect(wrapperProps.iconAlt).toEqual(EXAMPLE_ICON_ALT);
         expect(wrapperProps.iconSrc).toEqual(EXAMPLE_ICON_SRC);
         expect(wrapperProps.iconWidth).toEqual(EXAMPLE_ICON_WIDTH);
