@@ -9,11 +9,13 @@ Used APIs:
 - [List of dog breeds](https://dog.ceo/api/breeds/list/all)
 - [List of dog images](https://dog.ceo/api/breed/<raza>/images)
 
+[Demo](https://dog-image-finder.netlify.app/)
+
 ## Aplication
 
 ## Pre-requirements
 
-- [Yarn](https://yarnpkg.com/)
+- [yarn](https://yarnpkg.com/)/[npm](https://www.npmjs.com/get-npm)
 
 ## Run app
 
@@ -21,21 +23,21 @@ Install yarn in your device in order to execute this application.
 
 ### First execution
 
-Use `yarn install` to install all project dependencies.
-Then, run `yarn start` to begin his execution and access in your navigator to [http://localhost:3000](http://localhost:3000).
+Use `yarn install` or `npm install` to install all project dependencies.
+Then, run `yarn start` or `npm install` to begin his execution and access in your navigator to [http://localhost:3000](http://localhost:3000).
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ### Execution
 
-If the project dependencies have not been modified, just run `yarn start` to start the application.
+If the project dependencies have not been modified, just run `yarn start` or `npm install` to start the application.
 
 ## Testing
 
 Unit tests have been developed for some of the components located in the same directory as this one.
 
-To execute them, just run `yarn test` (required previous `yarn install`).
+To execute them, just run `yarn test` or `npm test` (required previous `yarn install` or `npm install`).
 
 In `package.json`, jest has been configured to allow the use of aliases required for tests.
 
@@ -117,6 +119,7 @@ This project makes use of husky and lint-staged to check that the code follows t
 - [Material UI](https://material-ui.com/): Frontend components library
 - [Prettier](https://prettier.io/): Code formatter
 - [React](https://es.reactjs.org/): A JavaScript library for building user interfaces
+- [React infinite scroll loading](https://github.com/ankeetmaini/react-infinite-scroll-component): Component for display infinite scroll loading data
 - [React router](https://reactrouter.com/): Routes manager
 - [Redux](https://es.redux.js.org/): States container
 - [Redux-saga](https://redux-saga.js.org/): Library for manage side effects
