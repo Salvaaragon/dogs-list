@@ -1,4 +1,5 @@
 import { Grid } from '@material-ui/core';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import styled from 'styled-components';
 
 export const GalleryGrid = styled(Grid)`
@@ -8,6 +9,11 @@ export const GalleryGrid = styled(Grid)`
   padding-left: 1rem;
   overflow-y: auto;
   max-height: 25rem;
+`;
+
+export const CustomInfiniteScroll = styled(InfiniteScroll)`
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export const ImageGrid = styled(Grid)`
