@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 const Router: React.FC = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route component={Home} />
     </Switch>
   );
 };
