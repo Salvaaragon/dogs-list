@@ -1,5 +1,9 @@
-import { InputLabel, MenuItem, Select } from '@material-ui/core';
+import { FormControl, InputLabel, MenuItem, Select } from '@material-ui/core';
 import styled from 'styled-components';
+
+export const CustomFormControl = styled(FormControl)`
+  width: 100%;
+`;
 
 export const CustomInputLabel = styled(InputLabel)`
   color: ${(props) => props.theme.palette.primary.dark};

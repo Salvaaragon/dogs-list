@@ -1,6 +1,11 @@
-import { FormControl, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import React from 'react';
-import { CustomInputLabel, CustomMenuItem, CustomSelector } from './styles';
+import {
+  CustomFormControl,
+  CustomInputLabel,
+  CustomMenuItem,
+  CustomSelector,
+} from './styles';
 import { CustomSelectProps } from './types';
 
 const CustomSelect: React.FC<CustomSelectProps> = (
@@ -14,7 +19,7 @@ const CustomSelect: React.FC<CustomSelectProps> = (
         <CustomInputLabel shrink>{label}</CustomInputLabel>
       </Grid>
       <Grid item xs={12}>
-        <FormControl variant="outlined" style={{ width: '100%' }}>
+        <CustomFormControl variant="outlined">
           <CustomSelector
             value={value}
             onChange={onChange}
@@ -31,7 +36,7 @@ const CustomSelect: React.FC<CustomSelectProps> = (
               </CustomMenuItem>
             ))}
           </CustomSelector>
-        </FormControl>
+        </CustomFormControl>
       </Grid>
     </Grid>
   );
